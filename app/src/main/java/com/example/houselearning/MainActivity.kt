@@ -95,9 +95,17 @@ class MainActivity : AppCompatActivity() {
 
         val predictedHousePrice = output[0][0]
 
+
         val formattedPrice = String.format("%.0f", predictedHousePrice)
 
-        return "Harga Rumah: ${formattedPrice} jt"
+        val priceInBillion = predictedHousePrice / 1000
+        val formattedPriceWithUnit = if (priceInBillion >= 1) {
+            String.format("%.1f", priceInBillion) + " Milyar"
+        } else {
+            formattedPrice + " juta"
+        }
+
+        return "Harga Rumah: $formattedPriceWithUnit"
     }
 
     private fun loadModelFile(assetManager: AssetManager, modelPath: String): MappedByteBuffer {
