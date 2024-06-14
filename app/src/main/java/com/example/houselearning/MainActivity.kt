@@ -11,11 +11,10 @@ import org.tensorflow.lite.Interpreter
 import java.io.FileInputStream
 import java.nio.MappedByteBuffer
 import java.nio.channels.FileChannel
-import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
     private lateinit var interpreter: Interpreter
-    private val mModel = "reall.tflite"
+    private val mModel = "Home.tflite"
 
     private lateinit var resultTextView: TextView
     private lateinit var date: EditText
@@ -94,21 +93,11 @@ class MainActivity : AppCompatActivity() {
         val output = Array(1) { FloatArray(1) }
         interpreter.run(inputVal, output)
 
-        val housePrice = input7.toFloatOrNull() ?: 0f
-        return when {
-            housePrice <= 20000000 -> getRandomOutput("Harga Rumah Murah")
-            housePrice <= 40000000 -> getRandomOutput("Harga Rumah Sedang")
-            else -> getRandomOutput("Harga Rumah Mahal")
-        }
-    }
+        val predictedHousePrice = output[0][0]
 
-    private fun getRandomOutput(category: String): String {
-        val random = Random.nextInt(3)
-        return when (random) {
-            0 -> "$category"
-            1 -> "$category"
-            else -> "$category"
-        }
+        val formattedPrice = String.format("%.0f", predictedHousePrice)
+
+        return "Harga Rumah: ${formattedPrice} jt"
     }
 
     private fun loadModelFile(assetManager: AssetManager, modelPath: String): MappedByteBuffer {
