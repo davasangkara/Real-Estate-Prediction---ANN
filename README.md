@@ -72,9 +72,8 @@ mengintegrasikan data historis harga properti dengan data ekonomi, demografi, so
 
 - Untuk data collection ini, saya menggunakan dataset Real Estate Price Predection  Dataset tersebut didapatkan dari website kaggle.
 [Real Estate Price Prediction (REPP)](https://www.kaggle.com/datasets/quantbruce/real-estate-price-prediction/data)
-  
+
+## Output
 
 ![Alt text](Output/1.jpg)
-![Alt text](Streamlit2.png)
-![Alt text](Streamlit3.png)
-![Alt text](Streamlit4.png)
+![Alt text](Output/2.jpg)
