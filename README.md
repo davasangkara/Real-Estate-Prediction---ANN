@@ -75,5 +75,5 @@ mengintegrasikan data historis harga properti dengan data ekonomi, demografi, so
 
 ## Output
 
-![Alt text](Output/1.jpg)
-![Alt text](Output/2.jpg)
+![Alt text](Output/A1.jpg)
+![Alt text](Output/A2.jpg)
