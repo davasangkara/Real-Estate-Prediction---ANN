@@ -59,8 +59,8 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="255dp"
-        android:layout_height="54dp"
+        android:layout_width="248dp"
+        android:layout_height="53dp"
         android:fontFamily="serif"
         android:text="Kumpulan data harga rumah \n Final project Mesin Learning"
         android:textColor="@color/white"
@@ -77,9 +77,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Masuk Aplikasi"
-        android:textColor="@color/white"
+        android:textColor="@color/lavender"
+        android:backgroundTint="@color/white"
         android:textStyle="bold"
-        android:fontFamily="serif"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
