@@ -41,7 +41,7 @@ Mengidentifikasi dan menganalisis faktor-faktor ekonomi, demografi, dan sosial y
   
 ### Solution statements
 - Pengembangan Model Machine Learning:
- mengembangkan model machine learning yang menggunakan teknik-teknik seperti regresi linear, regresi non-linear, dan algoritma machine learning lainnya untuk memprediksi harga properti berdasarkan dataset yang komprehensif dan relevan.
+ mengembangkan model machine learning yang menggunakan teknik seperti ANN (Artificial Neural Network) dan algoritma machine learning lainnya untuk memprediksi harga properti berdasarkan dataset yang komprehensif dan relevan.
 
 - Integrasi Data Beragam:
 mengintegrasikan data historis harga properti dengan data ekonomi, demografi, sosial, dan faktor pasar lainnya untuk mengidentifikasi pola dan korelasi yang dapat mempengaruhi harga properti di berbagai lokasi.
