@@ -49,7 +49,7 @@ mengintegrasikan data historis harga properti dengan data ekonomi, demografi, so
 ## Data Understanding
 -  Data ini menggunakan dataset yang berasal dari kaggle. Dataset ini berisi data transaksi yang terkait dengan Harga Rumah.Variabel-variabel utama.Terdiri dari 414 baris dan 8 kolom, yang mencakup berbagai varibel yang berkaitan dengan bahan makanan
 
-### Variabel-variabel pada Dataset Groceries adalah sebagai berikut:
+### Variabel-variabel pada Dataset Real Estate Price Prediction adalah sebagai berikut:
 - No 
 - transaction date 
 - house age 
