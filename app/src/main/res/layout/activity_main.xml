@@ -1,152 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/lavender"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/lavender"
-        tools:context=".MainActivity">
+        android:padding="16dp">
 
+        <!-- Toolbar -->
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:elevation="1dp"
+            android:elevation="4dp"
+            app:title="Form Input Rumah"
+            app:titleTextColor="@color/black"
             app:navigationIcon="@drawable/back"
-            app:titleTextColor="@color/white"/>
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
+        <!-- CardView Berisi Semua Form -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/formCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <EditText
+                    android:id="@+id/date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Tanggal Pembelian (1~31)"
+                    android:inputType="numberDecimal"
+                    android:textColor="@android:color/black"
+                    android:layout_marginBottom="12dp" />
+
+                <EditText
+                    android:id="@+id/house_age"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Usia Rumah (1~25 tahun)"
+                    android:inputType="numberDecimal"
+                    android:textColor="@android:color/black"
+                    android:layout_marginBottom="12dp" />
+
+                <EditText
+                    android:id="@+id/mrt_station"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Jumlah Kamar Tidur (1~12)"
+                    android:inputType="numberDecimal"
+                    android:textColor="@android:color/black"
+                    android:layout_marginBottom="12dp" />
+
+                <EditText
+                    android:id="@+id/stores"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Jumlah Ruangan (1~15)"
+                    android:inputType="numberDecimal"
+                    android:textColor="@android:color/black"
+                    android:layout_marginBottom="12dp" />
+
+                <EditText
+                    android:id="@+id/latitude"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Lebar Rumah (1~500 m)"
+                    android:inputType="numberDecimal"
+                    android:textColor="@android:color/black"
+                    android:layout_marginBottom="12dp" />
+
+                <EditText
+                    android:id="@+id/longitude"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Panjang Rumah (1~500 m)"
+                    android:inputType="numberDecimal"
+                    android:textColor="@android:color/black"
+                    android:layout_marginBottom="12dp" />
+
+                <EditText
+                    android:id="@+id/house_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Model Rumah (1-Mewah, 2-Classic, 3-Modern)"
+                    android:inputType="numberDecimal"
+                    android:textColor="@android:color/black"
+                    android:layout_marginBottom="12dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Tombol Predict -->
         <Button
             android:id="@+id/btnCheck"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="552dp"
             android:text="Predict"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"
+            android:textColor="@color/lavendertua"
+            android:backgroundTint="@color/white"
+            android:paddingHorizontal="32dp"
+            android:paddingVertical="12dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/formCard"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/date"
-            tools:ignore="HardcodedText" />
+            app:layout_constraintEnd_toEndOf="parent" />
 
+        <!-- Output -->
         <TextView
             android:id="@+id/txtResult"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:fontFamily="sans-serif"
             android:textColor="@android:color/black"
             android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="@id/btnCheck"
-            app:layout_constraintStart_toStartOf="@id/btnCheck"
-            app:layout_constraintTop_toBottomOf="@id/btnCheck" />
-
-        <EditText
-            android:id="@+id/date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-            android:ems="15"
-            android:hint="Inputkan Tanggal Pembelian(1~31)"
-            android:textColor="@color/white"
-            android:inputType="numberDecimal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.502"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/btnCheck"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="HardcodedText" />
+            app:layout_constraintEnd_toEndOf="parent" />
 
-        <EditText
-            android:id="@+id/house_age"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:ems="15"
-            android:hint="Inputkan Usia Rumah(1~25 tahun)"
-            android:inputType="numberDecimal"
-            android:textColor="@color/white"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.502"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/date"
-            tools:ignore="HardcodedText" />
-
-        <EditText
-            android:id="@+id/mrt_station"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:ems="15"
-            android:hint="Jumlah Kamar Tidur (1~12)"
-            android:textColor="@color/white"
-            android:inputType="numberDecimal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/house_age"
-            tools:ignore="HardcodedText" />
-
-
-        <EditText
-            android:id="@+id/stores"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:ems="15"
-            android:hint="Jumlah Ruangan (1~15)"
-            android:textColor="@color/white"
-            android:inputType="numberDecimal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/mrt_station"
-            tools:ignore="HardcodedText" />
-
-        <EditText
-            android:id="@+id/latitude"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:ems="15"
-            android:hint="Lebar Rumah \n(Input 1~500Meter)"
-            android:textColor="@color/white"
-            android:inputType="numberDecimal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/stores"
-            tools:ignore="HardcodedText" />
-
-        <EditText
-            android:id="@+id/longitude"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:ems="15"
-            android:hint="Panjang Rumah \n(Input 1~500Meter)"
-            android:textColor="@color/white"
-            android:inputType="numberDecimal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/latitude"
-            tools:ignore="HardcodedText" />
-
-        <EditText
-            android:id="@+id/house_price"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:ems="15"
-            android:hint="Model Rumah \n(Input 1-Mewah)\n(Input 2-Classic)\n(Input 3-Modern)"
-            android:textColor="@color/white"
-            android:inputType="numberDecimal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/longitude"
-            tools:ignore="HardcodedText" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

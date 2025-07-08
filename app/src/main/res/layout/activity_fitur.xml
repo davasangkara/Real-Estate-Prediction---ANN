@@ -1,246 +1,202 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    android:background="@color/lavender"
+    tools:context=".fitur.FiturActivity">
 
     <LinearLayout
-        android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:background="@color/lavender"
-        tools:context=".fitur.FiturActivity">
+        android:padding="16dp"
+        android:gravity="center_horizontal">
 
-
+        <!-- Toolbar -->
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:elevation="1dp"
-            app:navigationIcon="@drawable/back"
-            app:titleTextColor="@color/white" />
+            android:background="@color/lavender"
+            android:elevation="4dp"
+            app:navigationIcon="@drawable/back" />
 
+        <!-- Judul -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="1dp"
-            android:layout_marginBottom="8dp"
-            android:text="Fitur"
+            android:layout_marginTop="24dp"
+            android:text="Detail Fitur Dataset"
             android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold" />
 
+        <!-- Reusable Card Component -->
+        <!-- Untuk Setiap Fitur -->
         <androidx.cardview.widget.CardView
-            android:layout_width="360dp"
-            android:layout_height="110dp"
-            android:layout_margin="5dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="0dp"
-            app:cardMaxElevation="0dp"
-            app:cardUseCompatPadding="true">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/white">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:gravity="center"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="16dp">
 
                 <TextView
-                    android:layout_width="343dp"
-                    android:layout_height="match_parent"
-                    android:text="• Date :tanggal penjualan atau tanggal pencatatan properti dapat mengamati apakah harga properti cenderung naik atau turun dari bulan ke bulan atau dari tahun ke tahun. 414 non-null (float64)"
-                    android:textColor="@color/black"
-                    android:textSize="17sp" />
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="360dp"
-            android:layout_height="90dp"
-            android:layout_margin="5dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="0dp"
-            app:cardMaxElevation="0dp"
-            app:cardUseCompatPadding="true">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="332dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="• House Age (Usia Rumah) : Usia bangunan dapat memengaruhi kondisi serta potensi biaya pemeliharaan di masa depan. 414 non-full (float64)"
+                    android:text="• Date: Tanggal penjualan atau pencatatan properti untuk melihat tren harga. (414 non-null, float64)"
                     android:textColor="@color/black"
                     android:textSize="17sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text=""
+                    android:text="• House Age: Usia bangunan memengaruhi kondisi dan biaya perawatan. (414 non-null, float64)"
                     android:textColor="@color/black"
-                    android:textSize="20sp" />
-
+                    android:textSize="17sp" />
             </LinearLayout>
-
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:layout_width="360dp"
-            android:layout_height="90dp"
-            android:layout_margin="5dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="0dp"
-            app:cardMaxElevation="0dp"
-            app:cardUseCompatPadding="true">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/white">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:gravity="center"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="16dp">
 
                 <TextView
-                    android:layout_width="338dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="• Number of bedrooms : Menyediakan gambaran tentang kapasitas hunian properti.414 non-null (float64)"
+                    android:text="• Bedrooms: Jumlah kamar tidur menunjukkan kapasitas hunian. (414 non-null, float64)"
                     android:textColor="@color/black"
                     android:textSize="17sp" />
-
             </LinearLayout>
-
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:layout_width="360dp"
-            android:layout_height="100dp"
-            android:layout_margin="5dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="0dp"
-            app:cardMaxElevation="0dp"
-            app:cardUseCompatPadding="true">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/white">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:gravity="center"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="16dp">
 
                 <TextView
-                    android:layout_width="326dp"
-                    android:layout_height="match_parent"
-                    android:text="• Room : informasi tentang ruangan dapat mencakup luas area, tipe ruangan, fasilitas yang tersedia di dalamnya, kondisi, serta aspek-aspek lain yang relevan untuk deskripsi dan analisis ruangan.414 non-null(int64)"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="360dp"
-            android:layout_height="100dp"
-            android:layout_margin="5dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="0dp"
-            app:cardMaxElevation="0dp"
-            app:cardUseCompatPadding="true">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="326dp"
-                    android:layout_height="match_parent"
-                    android:text="• Wide : Lebar tanah dan/atau bangunan merupakan faktor penting yang memengaruhi harga properti..414 non-null(float64)"
-                    android:textColor="@color/black"
-                    android:textSize="17sp" />
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="360dp"
-            android:layout_height="90dp"
-            android:layout_margin="5dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="0dp"
-            app:cardMaxElevation="0dp"
-            app:cardUseCompatPadding="true">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="332dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="• Long : ukuran horizontal tanah yang umumnya diukur dalam meter atau kaki. Panjang tanah penting dalam menentukan ukuran dan bentuk properti serta dapat memengaruhi nilai properti.414 non-full (float64)"
+                    android:text="• Room: Jenis dan jumlah ruangan memengaruhi deskripsi dan nilai properti. (414 non-null, int64)"
                     android:textColor="@color/black"
                     android:textSize="17sp" />
-
-
-
             </LinearLayout>
-
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:layout_width="360dp"
-            android:layout_height="90dp"
-            android:layout_margin="5dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="0dp"
-            app:cardMaxElevation="0dp"
-            app:cardUseCompatPadding="true">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/white">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:gravity="center"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="16dp">
 
                 <TextView
-                    android:layout_width="332dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="• Price : jumlah uang atau nilai yang harus dibayarkan atau ditetapkan untuk memperoleh barang atau jasa..414 non-full (float64)"
+                    android:text="• Wide: Lebar tanah/bangunan memengaruhi desain dan nilai properti. (414 non-null, float64)"
                     android:textColor="@color/black"
                     android:textSize="17sp" />
-
-
-
             </LinearLayout>
-
         </androidx.cardview.widget.CardView>
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Long: Panjang properti memengaruhi ukuran dan nilai tanah. (414 non-null, float64)"
+                    android:textColor="@color/black"
+                    android:textSize="17sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Price: Nilai jual properti yang dipengaruhi fitur lainnya. (414 non-null, float64)"
+                    android:textColor="@color/black"
+                    android:textSize="17sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 </ScrollView>
